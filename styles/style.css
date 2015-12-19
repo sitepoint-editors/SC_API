@@ -19,4 +19,13 @@ main.loggedIn {
 }
 #tracklist ul, #playlists ul {
 	padding: 0;
+	list-style: none;
+}
+#tracklist ul li, #playlists ul li {
+	background-color: black;
+	color: white;
+	transition: 0.5s;
+}
+#tracklist ul li:hover, #playlists ul li:hover {
+	background-color: gray;
 }
