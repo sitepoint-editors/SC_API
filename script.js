@@ -9,7 +9,7 @@ $(document).ready(function () {
 	$("#login").click(function () {
 		SC.connect(function () {
 			SC.get("/me", function (me) {
-				$("main h2 span").html(me.username);
+				setUI(me.username, me.avatar_url, me.description);
 			});
 			if (SC.isConnected) {
 				$("header, main").addClass("loggedIn");
@@ -34,6 +34,12 @@ $(document).ready(function () {
 				$("#playlists ul").append("<li>" + resp[i].title + "</li>")
 			}
 		});
+	}
+	// set User Interface
+	function setUI(userName, avatar, description) {
+		$("main h2 span").html(userName);
+		$("#avatar").attr("src", avatar);
+		$("#description").html(description);
 	}
 	
 });

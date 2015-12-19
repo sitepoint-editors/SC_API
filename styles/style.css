@@ -13,6 +13,15 @@ main {
 main.loggedIn {
 	display: block;
 }
+#avatar {
+	width: 30%;
+	float: left;
+}
+#description {
+	float: left;
+	display: inline-block;
+}
+
 #tracklist, #playlists {
 	width: 50%;
 	float: left;
@@ -27,5 +36,5 @@ main.loggedIn {
 	transition: 0.5s;
 }
 #tracklist ul li:hover, #playlists ul li:hover {
-	background-color: gray;
+	background-color: #1A5E8E;
 }
