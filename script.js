@@ -2,7 +2,7 @@ $(document).ready(function () {
 	// Initialization of SDK
 	SC.initialize({
 		client_id: "21832d295e3463208d2ed0371ae08791",
-		callback: "mustagheesbutt.github.io/SC_API/callback.html"
+		redirect_uri: "mustagheesbutt.github.io/SC_API/callback.html"
 	});
 	
 	// Login handler
