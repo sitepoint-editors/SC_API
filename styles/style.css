@@ -1,0 +1,15 @@
+body {
+	font-family: Helvetica;
+}
+header {
+	text-align: center;
+}
+header.loggedIn h3, #login {
+	display: none;
+}
+main {
+	display: none;
+}
+main.loggedIn {
+	display: block;
+}
