@@ -13,13 +13,23 @@ main {
 main.loggedIn {
 	display: block;
 }
-#avatar {
-	width: 30%;
+#ui {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+#ui:after {
+	height: 150px;
+	clear: both;
+}
+#ui #avatar {
+	width: 15%;
 	float: left;
 }
-#description {
+#ui #description {
+	width: 100%;
+	height: 100%;
 	float: left;
 	display: inline-block;
+	padding: 15px;
 }
 
 #tracklist, #playlists {
