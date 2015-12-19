@@ -1,0 +1,52 @@
+body {
+	font-family: Helvetica;
+}
+header {
+	text-align: center;
+}
+header.loggedIn h3, header.loggedIn #login {
+	display: none;
+}
+main {
+	display: none;
+}
+main.loggedIn {
+	display: block;
+}
+#ui {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 225px;
+	padding: 10px;
+}
+#ui:after {
+	height: 150px;
+	clear: both;
+}
+#ui #avatar {
+	width: 15%;
+	float: left;
+}
+#ui #description {
+	width: 75%;
+	float: left;
+	display: inline-block;
+	padding: 15px;
+}
+
+#tracklist, #playlists {
+	width: 50%;
+	float: left;
+}
+#tracklist ul, #playlists ul {
+	padding: 0;
+	list-style: none;
+}
+#tracklist ul li, #playlists ul li {
+	background-color: black;
+	color: white;
+	padding: 5px;
+	transition: 0.5s;
+}
+#tracklist ul li:hover, #playlists ul li:hover {
+	background-color: #1A5E8E;
+}

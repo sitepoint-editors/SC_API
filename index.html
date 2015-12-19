@@ -2,17 +2,42 @@
 <html>
 
 <head>
+  <link type="text/css" rel="stylesheet" href="styles/style.css" />
   <title>SoundCloud API Examples - JavaScript SDK</title>
+  
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="http://connect.soundcloud.com/sdk.js"></script>
   <script src="script.js"></script>
 </head>
 
 <body>
   
-  <h1>SoundCloud API - Demonstrations</h1>
-  <h2>Login to your SoundCloud account Now.</h2>
+  <header>
+	  <h1>SoundCloud API - Demonstrations</h1>
+	  <h3>Login to your SoundCloud account Now.</h3>
+	  <img src="sc-button.png" id="login" />
+  </header>
   
-  <div></div>
+  <main>
+  
+	<div id="ui">
+		<h2>Welcome <span></span></h2>
+		<img id="avatar" />
+		<div id="description"></div>
+	</div>
+	
+	<!-- TRACKS -->
+	<div id="tracklist">
+		<h3>Your Tracks:</h3>
+		<ul></ul>
+	</div>
+	<!-- PLAYLISTS -->
+	<div id="playlists">
+		<h3>Your Playlists</h3>
+		<ul></ul>
+	</div>
+	
+  </main>
   
 </body>
 
