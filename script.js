@@ -14,7 +14,26 @@ $(document).ready(function () {
 			if (SC.isConnected) {
 				$("header, main").addClass("loggedIn");
 			}
+			getTracks();
+			getPlaylists();
 		});
 	});
+	
+	// function for user tracks
+	function getTracks() {
+		SC.get("/me/tracks", function (resp) {
+			for (var i=0; i< resp.length; i++) {
+				$("#tracklist ul").append("<li>" + resp[i].title + "</li>")
+			}
+		});
+	}
+	// function for user playlists
+	function getPlaylists() {
+		SC.get("/me/playlists", function (resp) {
+			for (var i=0; i< resp.length; i++) {
+				$("#playlists ul").append("<li>" + resp[i].title + "</li>")
+			}
+		});
+	}
 	
 });

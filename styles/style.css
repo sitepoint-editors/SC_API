@@ -13,3 +13,10 @@ main {
 main.loggedIn {
 	display: block;
 }
+#tracklist, #playlists {
+	width: 50%;
+	float: left;
+}
+#tracklist ul, #playlists ul {
+	padding: 0;
+}
