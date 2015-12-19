@@ -4,7 +4,7 @@ body {
 header {
 	text-align: center;
 }
-header.loggedIn h3, #login {
+header.loggedIn h3, header.loggedIn #login {
 	display: none;
 }
 main {
