@@ -6,9 +6,11 @@ $(document).ready(function () {
 	});
 	
 	// Login handler
+	var user_perma;
 	$("#login").click(function () {
 		SC.connect(function () {
 			SC.get("/me", function (me) {
+				user_perma = me.permalink;
 				setUI(me.username, me.avatar_url, me.description);
 			});
 			if (SC.isConnected) {
