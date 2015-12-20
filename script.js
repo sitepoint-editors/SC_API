@@ -50,7 +50,7 @@ $(document).ready(function () {
 	// play something
 	function play(uri) {
 		url = "http://soundcloud.com/" + user_perma + "/" + uri;
-		SC.oEmbed(url, {maxwidth: 200}, function (resp) {
+		SC.oEmbed(url, {maxheight: 200}, function (resp) {
 			$("#player").html(resp.html);
 		});
 	}
@@ -60,10 +60,8 @@ $(document).ready(function () {
 		var title = e.target.innerHTML;
 		if ( tracks.hasOwnProperty(title) ) {
 			play(tracks[title]);
-			console.log('in tracks');
 		} else if (playlists.hasOwnProperty(title)) {
 			play("sets/" + playlists[title]);
-			console.log('in sets');
 		}
 	});
 	
