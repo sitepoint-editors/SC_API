@@ -54,12 +54,14 @@ $(document).ready(function () {
 	}
 	
 	// when a track or playlist gets clicked, play it using `play()` function
-	$("li.playable").on("click", function (e) {
+	$("ul").on("click", function (e) {
 		var title = e.target.innerHTML;
 		if ( tracks.hasOwnProperty(title) ) {
 			play(tracks[title]);
+			console.log('in tracks');
 		} else if (playlists.hasOwnProperty(title)) {
 			play("sets/" + playlists[title]);
+			console.log('in sets');
 		}
 	});
 	
