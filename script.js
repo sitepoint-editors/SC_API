@@ -54,8 +54,8 @@ $(document).ready(function () {
 	}
 	
 	// when a track or playlist gets clicked, play it using `play()` function
-	$("li.playable").click(function (e) {
-		var title = $(this).html();
+	$("li.playable").on("click", function (e) {
+		var title = e.target.innerHTML;
 		if ( tracks.hasOwnProperty(title) ) {
 			play(tracks[title]);
 		} else if (playlists.hasOwnProperty(title)) {
