@@ -4,7 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Connect with SoundCloud</title>
   </head>
-  <body onload="window.opener.setTimeout(window.opener.SC.connectCallback, 1)">
-    <b style="text-align: center;">This popup should automatically close in a few seconds</b>
+  <body>
+    <h4>This popup should automatically close in a few seconds</h4>
+	
+	<script>
+		document.onload = function () {
+			window.opener.setTimeout(window.opener.SC.connectCallback, 1);
+		}
+	</script>
   </body>
 </html>
